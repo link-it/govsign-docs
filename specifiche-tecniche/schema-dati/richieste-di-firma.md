@@ -1,7 +1,3 @@
----
-description: prova
----
-
 # Richieste di firma
 
 ```mermaid
@@ -42,9 +38,8 @@ govsign_requests_documents {
     int index "Posizione nel dossier" 
     varchar(256) io_document_id "Identificativo assegnato da Firma con IO"
     varchar(32) status "Stato di lavorazione"
-    varchar(512) upload_url "Url per l'upload in Firma con IO"
     timestamp uploaded_at "Data di esecuzione dell'upload in Firma con IO"
-    varchar(512) signed_document_uri "Url di download del documento firmato"
+    varchar(512) signed_document_location "Posizione del pdf firmato su filesystem"
 }
 
 govsign_documents {
