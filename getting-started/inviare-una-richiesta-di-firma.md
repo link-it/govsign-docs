@@ -29,7 +29,7 @@ La console verifica a-priori che il firmatario disponga dell'AppIO necessaria al
 Completando la form si viene indirizzati alla pagina di dettaglio della richiesta appena creata potendo da qua monitorarne la lavorazione.
 
 {% hint style="warning" %}
-I tempi di elaborazione dipendono dalla frequenza di esecuzione dei batch di elaborazione e dal carico del sistema.
+I tempi di pubblicazione dipendono dalla frequenza di esecuzione dei batch di elaborazione e dal carico del sistema.
 {% endhint %}
 
 ## Tramite servizi REST
