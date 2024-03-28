@@ -4,7 +4,7 @@
 erDiagram
 
 govhub_organizations ||..o| govsign_organizations: "extends"
-govhub_services ||..o| govsign_dossiers: "extends"
+govhub_services ||..|{ govsign_dossiers: "extends"
 govsign_organizations ||..o{ govsign_dossiers: "manage"
 govsign_dossiers ||..o{ govsign_requests: "reference"
 govhub_users ||..o{ govsign_dossiers: "create"
@@ -18,6 +18,7 @@ govsign_organizations {
 
 govsign_dossiers {
     bigint id PK
+    bigint govhub_service_id FK
     bigint govhub_organization_id FK
     bigint created_by_user_id FK "Utente che ha creato il dossier"
     boolean enabled "Se disabilitato, impedisce nuove request"
